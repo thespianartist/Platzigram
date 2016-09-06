@@ -1,5 +1,6 @@
 package com.platzi.platzigram.view;
 
+import android.graphics.Color;
 import android.os.Build;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class PictureDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_picture_detail);
         showToolbar("", true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
             getWindow().setEnterTransition(new Fade());
         }
 
